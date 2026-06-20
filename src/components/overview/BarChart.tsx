@@ -35,11 +35,11 @@ export function BarChart({ items, maxValue, dark = false, compact = false }: Bar
           <div className={`h-2 overflow-hidden rounded-full ${dark ? "bg-white/10" : "bg-surface-muted"}`}>
             <motion.div
               className="h-full rounded-full bg-gradient-to-r from-brand-700 to-brand-500"
-              initial={{ width: 0 }}
+              initial={{ width: reduced ? `${(item.value / max) * 100}%` : 0 }}
               animate={
                 inView || reduced ? { width: `${(item.value / max) * 100}%` } : { width: 0 }
               }
-              transition={{ duration: 0.8, delay: i * 0.06, ease: [0.22, 1, 0.36, 1] }}
+              transition={{ duration: reduced ? 0 : 0.8, delay: reduced ? 0 : i * 0.06, ease: [0.22, 1, 0.36, 1] }}
             />
           </div>
         </div>

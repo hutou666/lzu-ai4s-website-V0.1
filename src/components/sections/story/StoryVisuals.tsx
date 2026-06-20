@@ -27,7 +27,7 @@ function ChartCard({
         compact ? "p-3 md:p-4" : "p-4 md:p-5"
       } ${className}`}
     >
-      <p className={`font-medium tracking-wider text-white/50 uppercase ${compact ? "mb-2 text-[10px]" : "mb-3 text-[11px]"}`}>
+      <p className={`font-medium tracking-wider text-white/50 uppercase ${compact ? "mb-2 text-[10px] sm:text-[11px] xl:text-xs" : "mb-3 text-[11px] sm:text-xs xl:text-sm"}`}>
         {title}
       </p>
       {children}
@@ -40,8 +40,8 @@ export function MembersVisual() {
   const { membership, gradeDistribution, majorTop } = slide;
 
   return (
-    <div className="grid h-full grid-cols-2 grid-rows-[1fr_auto] gap-3">
-      <ChartCard title="学历结构" className="row-span-2 flex flex-col justify-center">
+    <div className="grid h-full grid-cols-1 gap-3 sm:grid-cols-2 sm:grid-rows-[1fr_auto]">
+      <ChartCard title="学历结构" className="sm:row-span-2 flex flex-col justify-center">
         <DonutChart
           dark
           size="lg"
@@ -95,8 +95,8 @@ export function ActivitiesVisual() {
   const minParticipants = flagshipItems[flagshipItems.length - 1]?.value ?? 0;
 
   return (
-    <div className="flex flex-col gap-2.5">
-      <div className="grid grid-cols-2 gap-2.5">
+    <div className="flex flex-col gap-2.5 xl:gap-3">
+      <div className="grid grid-cols-1 gap-2.5 sm:grid-cols-2">
         <ChartCard title="参与者年级构成" compact>
           <BarChart dark compact items={audienceByGrade.map((g) => ({ label: g.label, value: g.percent }))} />
         </ChartCard>
@@ -105,7 +105,7 @@ export function ActivitiesVisual() {
           <div className="space-y-2">
             {byType.map((t, i) => (
               <div key={t.label}>
-                <div className="mb-0.5 flex items-center justify-between gap-2 text-[10px]">
+                <div className="mb-0.5 flex items-center justify-between gap-2 text-[10px] sm:text-xs xl:text-sm">
                   <span className="truncate text-white/60">{t.label}</span>
                   <span className="shrink-0 font-medium tabular-nums text-white">{t.percent}%</span>
                 </div>
@@ -168,7 +168,7 @@ export function ProjectsVisual() {
   };
 
   return (
-    <div className="grid h-full grid-cols-2 gap-3">
+    <div className="grid h-full grid-cols-1 gap-3 sm:grid-cols-2">
       {featured.map((p) => (
         <div
           key={p.slug}

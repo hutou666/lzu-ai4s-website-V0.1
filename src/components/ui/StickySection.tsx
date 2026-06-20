@@ -2,7 +2,7 @@
 
 import { useRef, type ReactNode } from "react";
 import { useScroll, type MotionValue } from "framer-motion";
-import { useReducedMotion } from "@/hooks/useReducedMotion";
+import { useScrollEffectsEnabled } from "@/hooks/useReducedMotion";
 
 interface StickySectionProps {
   id?: string;
@@ -24,14 +24,14 @@ export function StickySection({
   children,
 }: StickySectionProps) {
   const ref = useRef<HTMLElement>(null);
-  const reduced = useReducedMotion();
+  const scrollEffects = useScrollEffectsEnabled();
 
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start start", "end end"],
   });
 
-  if (reduced) {
+  if (!scrollEffects) {
     return (
       <section id={id} className={`section-padding relative overflow-hidden ${className}`}>
         {decor}
@@ -52,7 +52,7 @@ export function StickySection({
       <div className="sticky top-0 h-screen overflow-hidden">
         {decor}
         <div
-          className={`container-wide relative flex h-full flex-col px-5 pb-12 md:px-8 lg:px-12 ${
+          className={`container-wide relative flex h-full flex-col pb-12 ${
             align === "start" ? "justify-start" : "justify-center"
           } ${headerPad ? "pt-[88px]" : "py-16"}`}
         >

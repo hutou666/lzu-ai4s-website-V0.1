@@ -48,13 +48,13 @@ export function StorySlide({
       className="absolute inset-0 flex items-center"
       style={{ opacity, y, visibility, pointerEvents, zIndex }}
     >
-      <div className="container-wide grid w-full items-center gap-8 px-5 md:px-8 lg:grid-cols-[1fr_1.1fr] lg:gap-12 lg:px-12">
+      <div className="container-wide grid w-full items-center gap-8 lg:grid-cols-[1fr_1.15fr] lg:gap-12 xl:gap-16">
         <div className="flex flex-col justify-center">
           <p className="story-label">{label}</p>
-          <h2 className="mt-4 text-balance text-4xl font-semibold tracking-tight text-white md:text-5xl lg:text-6xl">
+          <h2 className="mt-4 text-balance text-3xl font-semibold tracking-tight text-white sm:text-4xl md:text-5xl xl:text-6xl 2xl:text-7xl">
             {title}
           </h2>
-          <p className="mt-4 max-w-md text-sm leading-relaxed text-white/55 md:text-base">{description}</p>
+          <p className="mt-4 max-w-xl text-sm leading-relaxed text-white/55 sm:text-base xl:text-lg">{description}</p>
           {extra}
 
           <div className="mt-8 grid grid-cols-2 gap-3 sm:flex sm:flex-wrap">
@@ -69,7 +69,9 @@ export function StorySlide({
               >
                 <p
                   className={`font-semibold tabular-nums text-white ${
-                    s.highlight ? "text-4xl leading-none md:text-5xl" : "text-2xl md:text-3xl"
+                    s.highlight
+                      ? "text-3xl leading-none sm:text-4xl md:text-5xl xl:text-6xl"
+                      : "text-xl sm:text-2xl md:text-3xl xl:text-4xl"
                   }`}
                 >
                   {s.value}

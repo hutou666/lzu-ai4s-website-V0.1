@@ -4,7 +4,7 @@ import { useRef } from "react";
 import { motion, useScroll, useTransform, type MotionValue } from "framer-motion";
 import Link from "next/link";
 import { storySlides } from "@/content/story";
-import { useReducedMotion } from "@/hooks/useReducedMotion";
+import { useScrollEffectsEnabled } from "@/hooks/useReducedMotion";
 import { SectionDecor } from "@/components/ui/SectionDecor";
 import { StorySlide, StatCard } from "./story/StorySlide";
 import { MembersVisual, ActivitiesVisual, ProjectsVisual } from "./story/StoryVisuals";
@@ -13,9 +13,9 @@ const SLIDE_COUNT = storySlides.length;
 const SEG = 1 / SLIDE_COUNT;
 
 const visualHeights = [
-  "h-[min(58vh,460px)]",
+  "h-[min(52vh,420px)] sm:h-[min(58vh,480px)] xl:h-[min(64vh,560px)]",
   "h-auto self-center",
-  "h-[min(58vh,460px)]",
+  "h-[min(52vh,420px)] sm:h-[min(58vh,480px)] xl:h-[min(64vh,560px)]",
 ];
 
 const visuals = [MembersVisual, ActivitiesVisual, ProjectsVisual] as const;
@@ -66,12 +66,14 @@ function ReducedStory() {
       {storySlides.map((slide, i) => {
         const Visual = visuals[i];
         return (
-          <div key={slide.id} className="flex min-h-screen items-center section-padding">
-            <div className="container-wide grid w-full items-center gap-8 lg:grid-cols-[1fr_1.1fr] lg:gap-12">
+          <div key={slide.id} className="flex min-h-0 items-center py-10 section-padding sm:min-h-screen sm:py-0">
+            <div className="container-wide grid w-full items-center gap-8 lg:grid-cols-[1fr_1.15fr] lg:gap-12 xl:gap-16">
               <div>
                 <p className="story-label">{slide.label}</p>
-                <h2 className="mt-4 text-4xl font-semibold tracking-tight text-white md:text-5xl">{slide.title}</h2>
-                <p className="mt-4 max-w-md text-white/55">{slide.description}</p>
+                <h2 className="mt-4 text-balance text-3xl font-semibold tracking-tight text-white sm:text-4xl md:text-5xl xl:text-6xl 2xl:text-7xl">
+                  {slide.title}
+                </h2>
+                <p className="mt-4 max-w-xl text-sm leading-relaxed text-white/55 sm:text-base xl:text-lg">{slide.description}</p>
                 {"deadline" in slide && slide.deadline && (
                   <p className="mt-2 text-xs text-white/35">数据截至 {slide.deadline}</p>
                 )}
@@ -100,7 +102,7 @@ function ReducedStory() {
 
 export function ScrollStory() {
   const containerRef = useRef<HTMLDivElement>(null);
-  const reduced = useReducedMotion();
+  const scrollEffects = useScrollEffectsEnabled();
 
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -118,7 +120,7 @@ export function ScrollStory() {
     return 2;
   });
 
-  if (reduced) {
+  if (!scrollEffects) {
     return <ReducedStory />;
   }
 

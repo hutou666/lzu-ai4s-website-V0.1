@@ -3,7 +3,7 @@
 import { useRef, useState, useEffect, type ReactNode } from "react";
 import { motion, useScroll, useTransform, type MotionValue } from "framer-motion";
 import { SectionDecor } from "@/components/ui/SectionDecor";
-import { useReducedMotion } from "@/hooks/useReducedMotion";
+import { useScrollEffectsEnabled } from "@/hooks/useReducedMotion";
 
 type Theme = "light" | "dark";
 
@@ -99,7 +99,7 @@ export function ScrollNarrativeSection({
 }: ScrollNarrativeSectionProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const travelRef = useRef({ startX: 0, endX: -2000, panelW: 2000 });
-  const reduced = useReducedMotion();
+  const scrollEffects = useScrollEffectsEnabled();
   const { startX, endX, panelW } = usePanelTravel(panelContentWidth);
   const styles = themeStyles[theme];
 
@@ -133,7 +133,7 @@ export function ScrollNarrativeSection({
     return sx + (ex - sx) * eased;
   });
 
-  if (reduced) {
+  if (!scrollEffects) {
     return <>{reducedFallback}</>;
   }
 

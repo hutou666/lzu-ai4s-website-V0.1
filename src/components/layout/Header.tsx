@@ -23,7 +23,7 @@ export function Header() {
           : "bg-transparent"
       }`}
     >
-      <div className="container-wide flex h-[72px] items-center justify-between px-5 md:px-8 lg:px-12">
+      <div className="container-wide flex h-[72px] items-center justify-between">
         <Link href="/" className="flex items-center gap-3">
           <Image
             src="/assets/club-logo.jpg"
@@ -76,7 +76,7 @@ function MobileNav() {
         <span className="sr-only">打开菜单</span>
       </summary>
       <nav
-        className="absolute top-12 right-0 w-64 rounded-2xl border border-white/10 bg-deep-elevated p-3 shadow-2xl"
+        className="absolute top-12 right-0 z-[60] w-[min(100vw-2rem,18rem)] rounded-2xl border border-white/10 bg-deep-elevated p-3 shadow-2xl"
         aria-label="移动端导航"
       >
         {siteConfig.nav.map((item) => (

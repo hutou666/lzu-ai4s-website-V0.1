@@ -58,7 +58,7 @@ export function Hero() {
       />
 
       {showHeroContent && (
-        <div className="relative z-[12] container-wide flex min-h-[calc(100vh-72px)] flex-col justify-center px-5 py-16 md:px-8 lg:px-12">
+        <div className="relative z-[12] container-wide flex min-h-[calc(100vh-72px)] flex-col justify-center py-16">
           {latestNews && (
             <motion.div
               className="hero-news-pill mb-10"
@@ -242,7 +242,7 @@ export function Hero() {
       {/* intro 期间占位，避免布局跳动 */}
       {!showHeroContent && isIntroActive && (
         <div
-          className="relative z-[12] container-wide min-h-[calc(100vh-72px)] px-5 py-16 md:px-8 lg:px-12"
+          className="relative z-[12] container-wide min-h-[calc(100vh-72px)] py-16"
           aria-hidden
         />
       )}

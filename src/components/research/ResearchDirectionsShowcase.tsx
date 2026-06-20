@@ -84,7 +84,7 @@ function PinnedGroups() {
       style={{ height: `${COUNT * 100}vh` }}
     >
       <div className="sticky top-0 h-screen overflow-hidden">
-        <div className="container-wide flex h-full items-center px-5 py-16 md:px-8 lg:px-12">
+        <div className="container-wide flex h-full items-center py-16">
           <div className="grid w-full gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.2fr)] lg:gap-16">
             <div className="lg:py-8">
               <p className="text-xs font-semibold tracking-[0.2em] text-brand-400 uppercase">

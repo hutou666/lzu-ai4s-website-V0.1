@@ -8,7 +8,7 @@ import { getOverviewMilestones } from "@/content/overviewGalleryTimeline";
 import { CountUp } from "@/components/ui/CountUp";
 import { SectionLabel } from "@/components/ui/SectionLabel";
 import { SectionDecor } from "@/components/ui/SectionDecor";
-import { useReducedMotion } from "@/hooks/useReducedMotion";
+import { useScrollEffectsEnabled } from "@/hooks/useReducedMotion";
 import {
   CARD_GAP,
   CARD_WIDTH,
@@ -103,19 +103,36 @@ function ReducedGalleryCard({ src, caption, date }: { src: string; caption: stri
 }
 
 function ReducedOverview() {
-  const { intro } = overviewData;
+  const { intro, membership, activityOverview } = overviewData;
   const items = useMemo(() => getOverviewMilestones(), []);
+
+  const stats = [
+    { value: membership.total, suffix: "人", label: "社团成员" },
+    { value: membership.undergrad.count, suffix: "人", label: "本科成员" },
+    { value: membership.graduate.count, suffix: "人", label: "硕士及以上" },
+    { value: activityOverview.stats[0].value, suffix: "次", label: "本学年活动" },
+  ];
 
   return (
     <section id="overview" className="section-padding relative overflow-hidden bg-gradient-to-b from-surface to-surface-alt">
       <SectionDecor variant="light" />
-      <div className="container-wide space-y-14">
-        <div className="max-w-lg">
+      <div className="container-wide space-y-10 sm:space-y-14">
+        <div className="max-w-2xl">
           <SectionLabel>Overview</SectionLabel>
           <h2 className="mt-3 section-title text-ink">社团概况</h2>
-          <p className="mt-4 text-ink-muted">{intro}</p>
+          <p className="mt-4 text-sm leading-relaxed text-ink-muted sm:text-base">{intro}</p>
+          <div className="mt-6 grid grid-cols-2 gap-2.5 sm:grid-cols-4">
+            {stats.map((stat) => (
+              <div key={stat.label} className="rounded-xl border border-border bg-white p-3 text-center shadow-sm">
+                <p className="text-lg font-semibold tabular-nums text-brand-700 sm:text-xl">
+                  <CountUp end={stat.value} suffix={stat.suffix} />
+                </p>
+                <p className="mt-1 text-[11px] font-medium text-ink sm:text-xs">{stat.label}</p>
+              </div>
+            ))}
+          </div>
         </div>
-        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {items.map((item, i) => (
             <ReducedGalleryCard key={`${item.date}-${i}`} src={item.src} caption={item.caption} date={item.date} />
           ))}
@@ -128,7 +145,7 @@ function ReducedOverview() {
 export function ClubOverview() {
   const containerRef = useRef<HTMLDivElement>(null);
   const travelRef = useRef({ startX: 0, endX: -2000, panelW: 2000 });
-  const reduced = useReducedMotion();
+  const scrollEffects = useScrollEffectsEnabled();
   const items = useMemo(() => getOverviewMilestones(), []);
   const count = items.length;
   const cardWidth = useCardWidth();
@@ -164,7 +181,7 @@ export function ClubOverview() {
     return sx + (ex - sx) * eased;
   });
 
-  if (reduced) return <ReducedOverview />;
+  if (!scrollEffects) return <ReducedOverview />;
 
   return (
     <section
