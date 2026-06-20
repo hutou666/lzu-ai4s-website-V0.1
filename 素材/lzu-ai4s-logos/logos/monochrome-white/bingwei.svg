@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="150" height="44" viewBox="0 0 150 44" role="img" aria-label="南京秉蔚信息 logo">
+<title>南京秉蔚信息</title>
+<rect width="150" height="44" fill="none"/>
+<g transform="translate(3,6)">
+  <path d="M2 25V5h7.5c6.5 0 10.5 3.6 10.5 9.8S16 25 9.5 25H2Zm5-4.5h2.3c3.4 0 5.5-2 5.5-5.7S12.7 9.5 9.3 9.5H7v11Z" fill="#8EA7FF"/>
+  <text x="28" y="18" fill="#FFFFFF" font-family="'Noto Sans SC','Microsoft YaHei',Arial,sans-serif" font-weight="800" font-size="16">南京秉蔚信息</text>
+  <text x="30" y="31" fill="#FFFFFF" font-family="Arial,sans-serif" font-weight="700" font-size="7.5" letter-spacing="1.2">BINGWEI INFORMATION</text>
+</g>
+</svg>

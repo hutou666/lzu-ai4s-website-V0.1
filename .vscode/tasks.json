@@ -1,0 +1,29 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "启动开发服务器",
+      "type": "npm",
+      "script": "dev",
+      "isBackground": true,
+      "problemMatcher": {
+        "owner": "custom",
+        "pattern": { "regexp": "^$" },
+        "background": {
+          "activeOnStart": true,
+          "beginsPattern": ".",
+          "endsPattern": "(Ready in|started server|Local:)"
+        }
+      },
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated",
+        "group": "dev",
+        "showReuseMessage": false
+      },
+      "runOptions": {
+        "runOn": "folderOpen"
+      }
+    }
+  ]
+}

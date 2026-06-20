@@ -1,0 +1,12 @@
+export { siteConfig } from "./site";
+export { activities, getActivityBySlug, getFeaturedActivities } from "./activities";
+export type { Activity } from "./activities";
+export { news, newsCategories, getNewsBySlug, getLatestNews } from "./news";
+export { withNewsMedia, type NewsWithMedia } from "./newsMedia";
+export type { NewsItem, NewsCategory } from "./news";
+export { achievements, ongoingCompetitions } from "./achievements";
+export type { Achievement } from "./achievements";
+export { adminDepartments, researchTracks } from "./organization";
+export { projects, getProjectBySlug } from "./projects";
+export type { Project } from "./projects";
+export { researchDirections, researchDirectionsSection } from "./researchDirections";

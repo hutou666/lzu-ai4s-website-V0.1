@@ -1,0 +1,13 @@
+{
+  "watch": [
+    "src",
+    "素材",
+    "next.config.ts",
+    "postcss.config.mjs",
+    "tsconfig.json"
+  ],
+  "ext": "ts,tsx,js,mjs,css,json",
+  "ignore": [".next/**", "node_modules/**", "public/**", "src/content/media/**"],
+  "delay": 1200,
+  "exec": "node scripts/sync-organization-people-photos.mjs --quiet && node scripts/sync-news-photos.mjs --quiet && node scripts/sync-join-qr.mjs --quiet && npx next dev"
+}

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="120" y2="120" gradientUnits="userSpaceOnUse">
+      <stop stop-color="oklch(0.94 0.03 265)"/>
+      <stop offset="1" stop-color="oklch(0.88 0.06 235)"/>
+    </linearGradient>
+  </defs>
+  <rect width="120" height="120" rx="28" fill="url(#bg)"/>
+  <circle cx="60" cy="44" r="20" fill="oklch(0.55 0.16 265)" fill-opacity="0.18"/>
+  <path d="M28 96c0-16 14-28 32-28s32 12 32 28" fill="oklch(0.55 0.16 265)" fill-opacity="0.14"/>
+</svg>

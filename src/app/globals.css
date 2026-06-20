@@ -1,0 +1,157 @@
+@import "tailwindcss";
+
+@theme {
+  --color-deep: oklch(0.11 0.025 265);
+  --color-deep-elevated: oklch(0.15 0.03 265);
+  --color-brand-700: oklch(0.38 0.14 265);
+  --color-brand-600: oklch(0.48 0.17 265);
+  --color-brand-500: oklch(0.55 0.19 265);
+  --color-brand-400: oklch(0.65 0.15 265);
+  --color-brand-300: oklch(0.75 0.1 265);
+  --color-lzu-purple: oklch(0.42 0.12 305);
+  --color-surface: oklch(0.995 0.002 265);
+  --color-surface-alt: oklch(0.97 0.004 265);
+  --color-ink: oklch(0.18 0.02 265);
+  --color-ink-muted: oklch(0.5 0.03 265);
+  --color-border: oklch(0.9 0.01 265);
+  --color-border-dark: oklch(1 0 0 / 0.08);
+  --color-story: oklch(0.16 0.045 255);
+  --color-accent-sky: oklch(0.62 0.18 235);
+  --color-accent-mint: oklch(0.78 0.12 175);
+  --font-sans: "PingFang SC", "Microsoft YaHei", "Noto Sans SC", "Source Han Sans SC",
+    system-ui, sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-surface text-ink font-sans antialiased;
+  }
+
+  ::selection {
+    @apply bg-brand-500/25 text-ink;
+  }
+}
+
+@layer utilities {
+  .section-padding {
+    @apply px-5 py-24 md:px-8 md:py-32 lg:px-12 xl:px-16;
+  }
+
+  .container-wide {
+    @apply mx-auto max-w-7xl;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .display-title {
+    @apply text-balance text-4xl font-semibold leading-[1.08] tracking-tight md:text-5xl lg:text-6xl xl:text-7xl;
+  }
+
+  .section-title {
+    @apply text-balance text-3xl font-semibold tracking-tight md:text-4xl lg:text-5xl;
+  }
+
+  .glass-dark {
+    @apply border border-white/10 bg-white/5 backdrop-blur-md;
+  }
+
+  .glass-card-dark {
+    @apply border border-white/10 bg-white/[0.04] backdrop-blur-md;
+  }
+
+  .card-hover-dark {
+    @apply transition-all duration-300 ease-out hover:-translate-y-1 hover:border-white/20 hover:shadow-xl hover:shadow-brand-600/10;
+  }
+
+  .card-hover {
+    @apply transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-xl hover:shadow-brand-600/10;
+  }
+
+  .bg-story {
+    background-color: var(--color-story);
+  }
+
+  .story-label {
+    @apply text-xs font-medium tracking-[0.2em] text-accent-sky uppercase;
+  }
+
+  .story-label::before {
+    content: "• ";
+    @apply text-accent-sky;
+  }
+
+  .story-cta {
+    @apply inline-flex items-center gap-2.5 rounded-full bg-accent-sky px-7 py-3.5 text-sm font-semibold text-white shadow-lg shadow-accent-sky/25 transition-all duration-300 hover:bg-accent-sky/90 hover:shadow-accent-sky/35;
+  }
+
+  .story-pagination {
+    @apply text-sm tabular-nums tracking-widest text-white/35;
+  }
+
+  @keyframes marquee-scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+
+  .marquee-track {
+    animation: marquee-scroll linear infinite;
+  }
+
+  .marquee-reverse {
+    animation-direction: reverse;
+  }
+
+  .marquee-pause:hover .marquee-track {
+    animation-play-state: paused;
+  }
+
+  .intro-brand-kicker {
+    @apply text-sm font-medium tracking-[0.24em] text-brand-400 uppercase md:text-base md:tracking-[0.28em] lg:text-lg lg:tracking-[0.3em];
+    font-family: ui-monospace, "Cascadia Code", "SF Mono", Consolas, monospace;
+    text-shadow: 0 0 24px oklch(0.55 0.19 265 / 0.35);
+  }
+
+  .intro-brand-kicker-line {
+    @apply h-px flex-1 max-w-16 bg-gradient-to-r from-transparent to-brand-500/50 md:max-w-24;
+  }
+
+  .intro-brand-kicker-line:last-child {
+    @apply bg-gradient-to-l from-transparent to-brand-500/50;
+  }
+
+  .intro-brand-title {
+    @apply text-balance text-[2rem] font-bold leading-[1.04] tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl xl:text-[5.5rem];
+    text-shadow:
+      0 0 80px oklch(0.55 0.19 265 / 0.22),
+      0 2px 24px oklch(0 0 0 / 0.45);
+  }
+
+  .intro-brand-title-accent {
+    @apply text-brand-300;
+    text-shadow: 0 0 40px oklch(0.65 0.15 265 / 0.45);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

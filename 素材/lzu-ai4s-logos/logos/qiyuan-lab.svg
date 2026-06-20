@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="150" height="44" viewBox="0 0 150 44" role="img" aria-label="北京启元实验室 logo">
+<title>北京启元实验室</title>
+<rect width="150" height="44" fill="none"/>
+<g transform="translate(4,5)">
+  <text x="0" y="21" fill="#3E1CCB" font-family="'Noto Sans SC','Microsoft YaHei',Arial,sans-serif" font-weight="900" font-size="22" letter-spacing="1">启元</text>
+  <text x="2" y="33" fill="#3E1CCB" font-family="Arial,sans-serif" font-weight="700" font-size="8" letter-spacing="1.9">QIYUAN LAB</text>
+  <text x="72" y="21" fill="#283348" font-family="'Noto Sans SC','Microsoft YaHei',Arial,sans-serif" font-weight="700" font-size="14">实验室</text>
+  <rect x="72" y="27" width="48" height="2" rx="1" fill="#3E1CCB" opacity="0.8"/>
+</g>
+</svg>

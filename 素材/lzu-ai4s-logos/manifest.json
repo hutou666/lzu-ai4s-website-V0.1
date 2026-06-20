@@ -1,0 +1,58 @@
+[
+  {
+    "name": "兰州大学信息科学与工程学院",
+    "filename": "lzu-sie.svg",
+    "displaySize": "160x48",
+    "source_or_note": "Custom text wordmark placeholder, not official VI",
+    "status": "文字字标占位版；建议后续替换为学院官方VI文件"
+  },
+  {
+    "name": "字节跳动",
+    "filename": "bytedance.svg",
+    "displaySize": "140x40",
+    "source_or_note": "Wikimedia Commons PNG preview from ByteDance logo English.svg",
+    "status": "Wikimedia PNG 预览嵌入SVG"
+  },
+  {
+    "name": "中国移动",
+    "filename": "china-mobile.svg",
+    "displaySize": "140x40",
+    "source_or_note": "Wikimedia/Wikipedia PNG preview from China Mobile logo (2019).svg",
+    "status": "Wikimedia PNG 预览嵌入SVG"
+  },
+  {
+    "name": "摩尔线程",
+    "filename": "moore-threads.svg",
+    "displaySize": "150x46",
+    "source_or_note": "Wikimedia Commons Moore Threads logo.png",
+    "status": "Wikimedia PNG 原图嵌入SVG"
+  },
+  {
+    "name": "优必选",
+    "filename": "ubtech.svg",
+    "displaySize": "130x40",
+    "source_or_note": "Wikimedia Commons PNG preview from UBTECH.svg",
+    "status": "Wikimedia PNG 预览嵌入SVG"
+  },
+  {
+    "name": "宇树科技",
+    "filename": "unitree.svg",
+    "displaySize": "130x40",
+    "source_or_note": "Wikimedia Commons PNG preview from Unitree.svg",
+    "status": "Wikimedia PNG 预览嵌入SVG"
+  },
+  {
+    "name": "北京启元实验室",
+    "filename": "qiyuan-lab.svg",
+    "displaySize": "150x44",
+    "source_or_note": "Custom text wordmark placeholder, not official VI",
+    "status": "文字字标占位版；建议后续替换为启元实验室官方VI文件"
+  },
+  {
+    "name": "南京秉蔚信息",
+    "filename": "bingwei.svg",
+    "displaySize": "150x44",
+    "source_or_note": "Custom text wordmark placeholder, not official VI",
+    "status": "文字字标占位版；建议后续替换为企业官方VI文件"
+  }
+]
