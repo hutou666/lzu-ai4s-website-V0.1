@@ -10,6 +10,11 @@ export const siteConfig = {
   url: "https://ai-explorers.lzu.edu.cn",
   email: "hjiarui2025@lzu.edu",
   wechat: "LZU AI探索者联盟",
+  wechatQr: {
+    src: "/assets/join/wechat-qr.png",
+    alt: "AI探索者联盟微信公众号二维码",
+    caption: "扫码关注公众号",
+  },
   address: "甘肃省兰州市榆中县夏官营镇兰州大学榆中校区致远楼601室",
   affiliations: [
     {
@@ -30,7 +35,7 @@ export const siteConfig = {
     "为在校学生和热爱科技创新的同学提供 AI 学习、交流、科研、竞赛与项目实践平台。",
   directions: [
     { title: "抖音大模型训练", desc: "字节跳动官方校企合作 · 训练标注与实习就业" },
-    { title: "具身智能", desc: "优必选/宇树校企 · 机器人校队与国家级竞赛" },
+    { title: "具身智能", desc: "甘肃移动主导 · 宇树/优必选技术支持 · 机器人校队与国家级竞赛" },
     { title: "大模型架构", desc: "北京启元实验室 · 前沿架构与学术论文" },
     { title: "行业智能体", desc: "兰大重点实验室 · 政务医疗文旅场景落地" },
   ],

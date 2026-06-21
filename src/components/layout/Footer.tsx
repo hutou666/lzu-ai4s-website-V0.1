@@ -1,6 +1,6 @@
 import Link from "next/link";
+import Image from "next/image";
 import { siteConfig } from "@/content/site";
-
 export function Footer() {
   return (
     <footer className="bg-deep text-white/60">
@@ -56,10 +56,19 @@ export function Footer() {
               <li>{siteConfig.address}</li>
               <li>公众号：{siteConfig.wechat}</li>
             </ul>
-            <div className="mt-5 flex h-20 w-20 items-center justify-center rounded-2xl border border-dashed border-white/15 text-[10px] text-white/35">
-              公众号二维码
-              <br />
-              待替换
+            <div className="mt-5 w-24">
+              <div className="relative aspect-square overflow-hidden rounded-2xl border border-white/10 bg-white">
+                <Image
+                  src={siteConfig.wechatQr.src}
+                  alt={siteConfig.wechatQr.alt}
+                  fill
+                  unoptimized
+                  className="object-contain p-1"
+                />
+              </div>
+              <p className="mt-2 text-center text-[10px] leading-snug text-white/45">
+                {siteConfig.wechatQr.caption}
+              </p>
             </div>
           </div>
         </div>

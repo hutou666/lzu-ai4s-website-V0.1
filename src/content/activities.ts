@@ -21,9 +21,9 @@ export const activities: Activity[] = [
     slug: "zhihui-lzu-exhibition",
     title: "智汇兰大·创享未来 信息学院展区展示活动",
     date: "2026年3月26日",
-    keywords: ["机器人展示", "AI赋能", "校园科技节"],
+    keywords: ["机器人展示", "AI应用", "校园科技节"],
     summary:
-      "打造「AI赋能未来」主题展区，展示宇树人形机器人、优必选悟空机器人、高性能计算显卡与服务器等 AI 产品。",
+      "设置人工智能主题展区，展示宇树人形机器人、优必选悟空机器人、高性能计算显卡与服务器等 AI 产品。",
     participants: "现场参观体验师生超 500 人次",
     featured: true,
     content: {

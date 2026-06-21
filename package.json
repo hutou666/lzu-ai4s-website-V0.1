@@ -3,15 +3,19 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "node scripts/sync-organization-people-photos.mjs --quiet && node scripts/sync-news-photos.mjs --quiet && node scripts/sync-join-qr.mjs --quiet && nodemon",
-    "dev:plain": "node scripts/sync-organization-people-photos.mjs --quiet && node scripts/sync-news-photos.mjs --quiet && node scripts/sync-join-qr.mjs --quiet && next dev",
-    "build": "node scripts/sync-page-photos.mjs && node scripts/sync-news-photos.mjs && node scripts/sync-join-qr.mjs && node scripts/sync-partner-logos.mjs && node scripts/compress-images.mjs --quiet && node scripts/clean-next.mjs && node scripts/build-site.mjs",
+    "dev": "node scripts/import-people-xlsx.mjs --quiet && node scripts/sync-organization-people-photos.mjs --quiet && node scripts/sync-news-photos.mjs --quiet && node scripts/sync-join-qr.mjs --quiet && node scripts/sync-wechat-qr.mjs --quiet && nodemon",
+    "dev:plain": "node scripts/import-people-xlsx.mjs --quiet && node scripts/sync-organization-people-photos.mjs --quiet && node scripts/sync-news-photos.mjs --quiet && node scripts/sync-join-qr.mjs --quiet && node scripts/sync-wechat-qr.mjs --quiet && next dev",
+    "build": "node scripts/import-people-xlsx.mjs --quiet && node scripts/sync-page-photos.mjs && node scripts/sync-news-photos.mjs && node scripts/sync-join-qr.mjs && node scripts/sync-wechat-qr.mjs && node scripts/sync-partner-logos.mjs && node scripts/sync-organization-people-photos.mjs --quiet && node scripts/compress-images.mjs --quiet && node scripts/clean-next.mjs && node scripts/build-site.mjs",
     "preview": "npx --yes serve out",
     "compress:images": "node scripts/compress-images.mjs",
     "sync:photos": "node scripts/sync-page-photos.mjs",
     "sync:join-qr": "node scripts/sync-join-qr.mjs",
+    "sync:wechat-qr": "node scripts/sync-wechat-qr.mjs",
     "sync:photos:about": "node scripts/sync-page-photos.mjs about",
     "sync:people-photos": "node scripts/sync-organization-people-photos.mjs",
+    "export:people-xlsx": "node scripts/export-people-xlsx.mjs",
+    "import:people-xlsx": "node scripts/import-people-xlsx.mjs",
+    "sync:people-roster": "node scripts/import-people-xlsx.mjs && node scripts/sync-organization-people-photos.mjs",
     "sync:logos": "node scripts/sync-partner-logos.mjs",
     "start": "next start",
     "lint": "eslint ."
@@ -34,6 +38,7 @@
     "nodemon": "^3.1.10",
     "sharp": "^0.35.2",
     "tailwindcss": "^4.1.13",
-    "typescript": "^5.9.2"
+    "typescript": "^5.9.2",
+    "xlsx": "^0.18.5"
   }
 }

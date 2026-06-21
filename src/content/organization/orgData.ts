@@ -16,16 +16,16 @@ export interface OrgNode {
 export const orgHero = {
   label: `ORGANIZATION SYSTEM · ${ENGLISH_NAME}`,
   title: "组织架构",
-  headline: "让兴趣社团像科研组织一样高效运行",
+  headline: "以规范机制支撑社团长期运行",
   subtitle:
-    "AI探索者联盟构建了「负责人统筹 + 四部协同 + 科研小组推进 + 普通成员参与」的组织机制，形成行政运行、科研训练、活动执行、品牌传播和经费管理相互支撑的社团运行体系。",
+    "AI探索者联盟建立「负责人统筹 + 四部协同 + 科研小组推进 + 普通成员参与」的组织机制，统筹行政运行、科研训练、活动执行、品牌传播和经费管理等工作。",
   ctaPrimary: { label: "查看组织图", href: "#org-chart" },
   ctaSecondary: { label: "浏览历届档案", href: "#archive" },
 } as const;
 
 export const orgOverview = {
   title: "一套双轨运行机制",
-  subtitle: "行政管理保证社团稳定运转，四大科研方向推动校企项目、实验室课题与竞赛训练持续生长。",
+  subtitle: "行政管理保障社团稳定运转，四大科研方向承担校企项目、实验室课题和竞赛训练等具体工作。",
 } as const;
 
 export const orgData = {
@@ -82,7 +82,7 @@ export const orgData = {
 } as const;
 
 export const orgCta = {
-  title: "加入一个真正持续生长的 AI 学生组织",
+  title: "加入一个长期运行的 AI 学生组织",
   body: "无论你希望参与活动组织、内容传播、科研训练、机器人实践，还是希望从零开始学习人工智能，都可以在 AI探索者联盟找到适合自己的位置。",
   buttons: [
     { label: "加入我们", href: "/join" },

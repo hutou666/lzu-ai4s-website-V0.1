@@ -10,5 +10,9 @@ export const joinGallery: JoinGalleryItem[] = [
   {
     "src": "/assets/page-photos/join/qq-group-qr.png",
     "caption": "qq-group-qr"
+  },
+  {
+    "src": "/assets/page-photos/join/wechat-official-qr.png",
+    "caption": "wechat-official-qr"
   }
 ];

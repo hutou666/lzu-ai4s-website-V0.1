@@ -57,9 +57,9 @@ export const partners: Partner[] = [
     logoHeight: 56,
   },
   {
-    id: "bingwei",
-    name: "南京秉蔚信息",
-    logo: "/assets/partners/bingwei.svg",
+    id: "metax",
+    name: "沐曦",
+    logo: "/assets/partners/metax.png",
     logoWidth: 180,
     logoHeight: 52,
   },

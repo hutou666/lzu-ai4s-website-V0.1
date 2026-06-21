@@ -75,5 +75,6 @@ export const joinPage = {
       { label: "微信公众号", value: siteConfig.wechat },
       { label: "办公地址", value: siteConfig.address },
     ],
+    wechatQr: siteConfig.wechatQr,
   },
 } as const;

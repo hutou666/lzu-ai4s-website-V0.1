@@ -79,15 +79,6 @@ export function AboutImageSlot({
           </div>
         )}
       </div>
-      {image.caption && (
-        <figcaption
-          className={`mt-3 text-center text-xs leading-relaxed ${
-            dark ? "text-white/40" : "text-ink-muted"
-          }`}
-        >
-          {image.caption}
-        </figcaption>
-      )}
     </figure>
   );
 }

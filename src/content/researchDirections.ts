@@ -24,7 +24,7 @@ export interface ResearchDirection {
 export const researchDirectionsSection = {
   title: "四大科研方向，连接校企与实验室",
   subtitle:
-    "科研部下设四个方向小组，分别对接字节跳动、优必选/宇树、启元实验室与兰大重点实验室，让成员在真实项目中完成从学习到交付的成长跃迁。",
+    "科研部下设四个方向小组，分别对接字节跳动、甘肃移动（宇树/优必选技术支持）、启元实验室与兰大重点实验室，让成员在真实项目中完成从学习到交付的成长跃迁。",
 } as const;
 
 export const researchDirections: ResearchDirection[] = [
@@ -61,16 +61,17 @@ export const researchDirections: ResearchDirection[] = [
   {
     id: "embodied-ai",
     name: "具身智能方向",
-    partner: "优必选 / 宇树校企合作",
-    enLabel: "Embodied AI · UBTECH & Unitree",
+    partner: "甘肃移动主导 · 宇树/优必选技术支持",
+    enLabel: "Embodied AI · Gansu Mobile · UBTECH & Unitree",
     shortName: "具身智能",
     description:
-      "围绕人形机器人开展训练、数据采集与动作执行等科研工作，在优必选与宇树等平台完成从感知到控制的完整实践链路。",
+      "围绕人形机器人开展训练、数据采集与动作执行等科研工作，在甘肃移动主导的校企平台下，依托宇树与优必选提供的硬件与技术支撑，完成从感知到控制的完整实践链路。",
     summary:
       "开展人形机器人训练与数据采集，选拔优秀成员组建兰州大学机器人校队，征战全国机器人大赛。",
     keywords: ["人形机器人", "数据采集", "动作执行", "机器人竞赛"],
     benefits: [
-      "优必选 / 宇树校企硬件与导师资源",
+      "甘肃移动主导的校企平台与项目资源",
+      "宇树/优必选硬件与技术支撑",
       "组建兰州大学机器人校队",
       "代表学校参加全国机器人大赛",
       "获奖成员可获保研加分与竞赛荣誉",
@@ -84,8 +85,8 @@ export const researchDirections: ResearchDirection[] = [
       title: "人形机器人训练与校队建设",
       status: "进行中",
       summary:
-        "依托优必选与宇树校企合作平台，开展机器人训练与数据采集，并选拔成员组建兰大机器人校队参与国家级赛事。",
-      tags: ["具身智能", "优必选", "宇树", "机器人竞赛"],
+        "在甘肃移动主导的校企合作框架下，依托宇树/优必选技术支持开展机器人训练与数据采集，并选拔成员组建兰大机器人校队参与国家级赛事。",
+      tags: ["具身智能", "甘肃移动", "宇树", "优必选", "机器人竞赛"],
     },
   },
   {

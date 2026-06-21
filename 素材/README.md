@@ -12,7 +12,7 @@
 | `科研方向 照片/` | 科研方向 | 预留 |
 | `荣誉成果 照片/` | 荣誉成果 | 预留 |
 | `新闻动态 照片/` | 新闻动态 | 按发布日期命名，见下方说明 |
-| `加入我们 照片/` | 加入我们 | `qq-group-qr.png` = 社团 QQ 群二维码；运行 `npm run sync:join-qr` |
+| `加入我们 照片/` | 加入我们 | `qq-group-qr.png` = 社团 QQ 群二维码；`wechat-official-qr.png` = 微信公众号二维码；运行 `npm run sync:join-qr` / `npm run sync:wechat-qr` |
 
 ## 关于我们 · 6 个槽位顺序
 
@@ -40,6 +40,7 @@
 npm run sync:photos          # 同步全部页面
 npm run sync:photos:about    # 仅同步关于我们
 npm run sync:join-qr       # 同步社团 QQ 群二维码（dev 启动时也会自动执行）
+npm run sync:wechat-qr     # 同步微信公众号二维码（dev 启动时也会自动执行）
 node scripts/sync-page-photos.mjs organization  # 仅组织架构届别封面
 node scripts/sync-page-photos.mjs home-overview  # 仅首页发展历程
 npm run sync:people-photos                       # 同步届别成员照片（dev 启动时也会自动执行）

@@ -63,6 +63,26 @@ export function isAllRoleFilter(role: string): role is typeof ALL_ROLE_FILTER {
   return role === ALL_ROLE_FILTER;
 }
 
+/** 指导老师展示顺序（第一届） */
+export const ADVISOR_NAME_ORDER = ["杨裔", "李彩虹", "任超"] as const;
+
+export function comparePeople(a: Person, b: Person): number {
+  const roles = ROLE_FILTERS.filter((r): r is PersonRole => !isAllRoleFilter(r));
+  const ra = roles.indexOf(a.role);
+  const rb = roles.indexOf(b.role);
+  if (ra !== rb) return (ra === -1 ? 99 : ra) - (rb === -1 ? 99 : rb);
+
+  if (a.role === "指导老师" && b.role === "指导老师") {
+    const ia = ADVISOR_NAME_ORDER.indexOf(a.name as (typeof ADVISOR_NAME_ORDER)[number]);
+    const ib = ADVISOR_NAME_ORDER.indexOf(b.name as (typeof ADVISOR_NAME_ORDER)[number]);
+    if (ia !== -1 && ib !== -1) return ia - ib;
+    if (ia !== -1) return -1;
+    if (ib !== -1) return 1;
+  }
+
+  return a.name.localeCompare(b.name, "zh-CN");
+}
+
 export function countPeopleByRole(people: Person[]): Record<string, number> {
   const roles = ROLE_FILTERS.filter((r): r is PersonRole => !isAllRoleFilter(r));
   const counts: Record<string, number> = Object.fromEntries(roles.map((r) => [r, 0]));

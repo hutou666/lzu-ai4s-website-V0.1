@@ -6,4 +6,29 @@ export interface AchievementsGalleryItem {
   caption: string;
 }
 
-export const achievementsGallery: AchievementsGalleryItem[] = [];
+export const achievementsGallery: AchievementsGalleryItem[] = [
+  {
+    "src": "/assets/page-photos/achievements/01-全国青少年科技社团支持计划.png",
+    "caption": "01-全国青少年科技社团支持计划"
+  },
+  {
+    "src": "/assets/page-photos/achievements/02-兰州大学十佳学生社团指导教师.png",
+    "caption": "02-兰州大学十佳学生社团指导教师"
+  },
+  {
+    "src": "/assets/page-photos/achievements/03-青年夜校示范项目.png",
+    "caption": "03-青年夜校示范项目"
+  },
+  {
+    "src": "/assets/page-photos/achievements/04-社团文化节心动运营社团奖.png",
+    "caption": "04-社团文化节心动运营社团奖"
+  },
+  {
+    "src": "/assets/page-photos/achievements/05-教育信息技术应用创新大赛西北赛区一等奖.png",
+    "caption": "05-教育信息技术应用创新大赛西北赛区一等奖"
+  },
+  {
+    "src": "/assets/page-photos/achievements/06-官方媒体深度报道.png",
+    "caption": "06-官方媒体深度报道"
+  }
+];

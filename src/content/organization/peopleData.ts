@@ -1,4 +1,5 @@
 import defaults from "./people-defaults.json";
+import { comparePeople } from "./people-types";
 import type { Cohort, Person } from "./people-types";
 
 export type { Cohort, Person, PersonRole, RoleFilterValue } from "./people-types";
@@ -10,6 +11,7 @@ export {
   UNIT_FILTERS as unitFilters,
   countPeopleByRole,
   isAllRoleFilter,
+  comparePeople,
 } from "./people-types";
 
 export const peopleSection = defaults.section;
@@ -40,7 +42,8 @@ export function getCurrentCohort(): Cohort {
 }
 
 export function getPeopleByCohort(cohortId: string): Person[] {
-  return peopleByCohort[cohortId] ?? [];
+  const people = peopleByCohort[cohortId] ?? [];
+  return [...people].sort(comparePeople);
 }
 
 export function getPersonBySlug(slug: string): Person | undefined {

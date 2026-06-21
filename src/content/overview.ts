@@ -33,7 +33,7 @@ export const overviewData = {
   activityOverview: {
     deadline: "2026年6月",
     summary:
-      "本学年社团围绕周训、讲座、竞赛与产教融合持续发力，活动密度与覆盖面稳步提升，形成「学—练—赛—用」闭环。",
+      "本学年社团围绕周训、讲座、竞赛与产教融合等工作持续开展活动，活动频次和覆盖人数稳步提升。",
     stats: [
       { value: 25, suffix: "次", label: "公开活动", desc: "本学年累计举办" },
       { value: 5000, suffix: "+", label: "参与人次", desc: "活动覆盖总量" },

@@ -227,6 +227,22 @@ function PartnerSection() {
             </FadeIn>
           ))}
         </div>
+
+        <FadeIn delay={0.2}>
+          <div className="mx-auto mt-10 w-full max-w-[15rem] rounded-3xl border border-border bg-white p-5 shadow-[0_16px_40px_rgba(15,23,42,0.05)]">
+            <div className="relative mx-auto aspect-square w-full overflow-hidden rounded-2xl bg-white">
+              <Image
+                src={partner.wechatQr.src}
+                alt={partner.wechatQr.alt}
+                fill
+                unoptimized
+                className="object-contain"
+              />
+            </div>
+            <p className="mt-4 text-center text-sm font-medium text-ink">{partner.wechatQr.caption}</p>
+            <p className="mt-1 text-center text-xs text-ink-muted">微信扫码关注 {partner.contacts[1]?.value}</p>
+          </div>
+        </FadeIn>
       </div>
     </section>
   );

@@ -9,14 +9,14 @@ const clubSrc = path.join(root, "素材", "lzu-ai4s-logos", "club-logo");
 const clubDstDir = path.join(root, "public", "assets");
 
 const PARTNER_FILES = [
-  "lzu-sie",
-  "bytedance",
-  "china-mobile",
-  "moore-threads",
-  "ubtech",
-  "unitree",
-  "qiyuan-lab",
-  "bingwei",
+  { name: "lzu-sie", ext: "svg" },
+  { name: "bytedance", ext: "svg" },
+  { name: "china-mobile", ext: "svg" },
+  { name: "moore-threads", ext: "svg" },
+  { name: "ubtech", ext: "svg" },
+  { name: "unitree", ext: "svg" },
+  { name: "qiyuan-lab", ext: "svg" },
+  { name: "metax", ext: "png" },
 ];
 
 function copyIfExists(src, dst) {
@@ -34,14 +34,14 @@ if (!fs.existsSync(srcDir)) {
 }
 
 let count = 0;
-for (const name of PARTNER_FILES) {
-  const src = path.join(srcDir, `${name}.svg`);
-  const dst = path.join(dstDir, `${name}.svg`);
+for (const { name, ext } of PARTNER_FILES) {
+  const src = path.join(srcDir, `${name}.${ext}`);
+  const dst = path.join(dstDir, `${name}.${ext}`);
   if (copyIfExists(src, dst)) {
-    console.log(`partner: ${name}.svg`);
+    console.log(`partner: ${name}.${ext}`);
     count += 1;
   } else {
-    console.warn(`missing: ${name}.svg`);
+    console.warn(`missing: ${name}.${ext}`);
   }
 }
 

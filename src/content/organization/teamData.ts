@@ -151,7 +151,7 @@ export const teamData: TeamMember[] = [
     major: "专业占位",
     focus: "机器人校队与竞赛",
     description: "带领方向小组开展人形机器人训练与数据采集，负责校队选拔与竞赛备赛。",
-    tags: ["具身智能", "优必选", "宇树"],
+    tags: ["具身智能", "甘肃移动", "宇树", "优必选"],
     avatar: placeholderAvatar,
     tier: "groupLeader",
   },
