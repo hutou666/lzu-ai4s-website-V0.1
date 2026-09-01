@@ -85,5 +85,40 @@ export const newsMediaByDate: Record<string, NewsMediaEntry> = {
     "images": [
       "/assets/news/2026-06-19.jpg"
     ]
+  },
+  "2026-06-23": {
+    "date": "2026-06-23",
+    "cover": "/assets/news/2026-06-23.jpg",
+    "images": [
+      "/assets/news/2026-06-23.jpg"
+    ]
+  },
+  "2026-06-30": {
+    "date": "2026-06-30",
+    "cover": "/assets/news/2026-06-30.jpg",
+    "images": [
+      "/assets/news/2026-06-30.jpg"
+    ]
+  },
+  "2026-07-26": {
+    "date": "2026-07-26",
+    "cover": "/assets/news/2026-07-26.jpg",
+    "images": [
+      "/assets/news/2026-07-26.jpg"
+    ]
+  },
+  "2026-08-06": {
+    "date": "2026-08-06",
+    "cover": "/assets/news/2026-08-06.png",
+    "images": [
+      "/assets/news/2026-08-06.png"
+    ]
+  },
+  "2026-08-28": {
+    "date": "2026-08-28",
+    "cover": "/assets/news/2026-08-28.jpg",
+    "images": [
+      "/assets/news/2026-08-28.jpg"
+    ]
   }
 };

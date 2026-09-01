@@ -30,5 +30,17 @@ export const achievementsGallery: AchievementsGalleryItem[] = [
   {
     "src": "/assets/page-photos/achievements/06-官方媒体深度报道.png",
     "caption": "06-官方媒体深度报道"
+  },
+  {
+    "src": "/assets/page-photos/achievements/07-2026技嘉X英伟达 桌面AI超算竞赛 最具开发潜力奖.png",
+    "caption": "07-2026技嘉X英伟达 桌面AI超算竞赛 最具开发潜力奖"
+  },
+  {
+    "src": "/assets/page-photos/achievements/08-2026 启元人工智能大赛 九齿SKILL开发赛道 全国第1名.png",
+    "caption": "08-2026 启元人工智能大赛 九齿SKILL开发赛道 全国第1名"
+  },
+  {
+    "src": "/assets/page-photos/achievements/09-2026 第二届百度秒哒杯人工智能通识应用大赛 最具潜力奖.png",
+    "caption": "09-2026 第二届百度秒哒杯人工智能通识应用大赛 最具潜力奖"
   }
 ];

@@ -214,7 +214,7 @@ export default function AchievementsPage() {
               <h2 className="mt-3 text-3xl font-semibold text-ink md:text-4xl">年度成果脉络</h2>
             </div>
 
-            <div className="grid gap-4 lg:grid-cols-5">
+            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
               {achievementTimeline.map((item, index) => (
                 <div key={`${item.date}-${item.title}`} className="rounded-2xl border border-border bg-white p-5">
                   <div className="flex items-center gap-3">

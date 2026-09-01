@@ -84,23 +84,24 @@ function ClubSection() {
           </FadeIn>
 
           <FadeIn delay={0.1}>
-            <div className="mx-auto w-full max-w-[19rem] rounded-3xl border border-border bg-white p-6 shadow-[0_20px_50px_rgba(15,23,42,0.06)] lg:mx-0">
-              <div className="relative mx-auto aspect-square w-full max-w-[15rem] overflow-hidden rounded-2xl bg-white">
-                <Image
-                  src={club.qr.src}
-                  alt={club.qr.alt}
-                  fill
-                  unoptimized
-                  className="object-contain"
-                />
-              </div>
-              <p className="mt-4 text-center text-sm font-medium text-ink">{club.qr.caption}</p>
-              {"groupNumber" in club.qr && club.qr.groupNumber && (
-                <p className="mt-1 text-center text-xs tabular-nums text-ink-muted">
-                  群号：{club.qr.groupNumber}
-                </p>
-              )}
-              <p className="mt-1 text-center text-xs text-ink-muted">QQ 扫码加入群聊</p>
+            <div className="mx-auto grid w-full max-w-[40rem] gap-4 sm:grid-cols-2 lg:mx-0 lg:max-w-[28rem]">
+              {club.qrs.map((qr) => (
+                <div
+                  key={qr.src}
+                  className="rounded-3xl border border-border bg-white p-5 shadow-[0_20px_50px_rgba(15,23,42,0.06)]"
+                >
+                  <div className="relative mx-auto aspect-square w-full overflow-hidden rounded-2xl bg-white">
+                    <Image src={qr.src} alt={qr.alt} fill unoptimized className="object-contain" />
+                  </div>
+                  <p className="mt-4 text-center text-sm font-medium text-ink">{qr.caption}</p>
+                  {"groupNumber" in qr && qr.groupNumber ? (
+                    <p className="mt-1 text-center text-xs tabular-nums text-ink-muted">群号：{qr.groupNumber}</p>
+                  ) : null}
+                  <p className="mt-1 text-center text-xs text-ink-muted">
+                    {"hint" in qr && qr.hint ? qr.hint : "QQ 扫码加入群聊"}
+                  </p>
+                </div>
+              ))}
             </div>
           </FadeIn>
         </div>

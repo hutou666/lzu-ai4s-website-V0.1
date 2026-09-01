@@ -35,18 +35,27 @@ export const joinPage = {
 
   club: {
     title: "加入社团",
-    subtitle: "扫描下方群二维码，即可加入社团交流群，获取招新、周训与活动通知。",
+    subtitle: "2026 级新生请优先扫描新生群二维码；其他同学可加入社团总 QQ 群，获取招新、周训与活动通知。",
     steps: [
-      "使用 QQ 扫描下方二维码",
+      "使用 QQ 扫描对应群二维码（新生优先加入 2026 级新生群）",
       "按群公告完成昵称与学院备注",
       "关注群内活动通知，参与周训与公开活动",
     ],
-    qr: {
-      src: "/assets/join/group-qr.png",
-      alt: "AI探索者联盟社团交流群二维码",
-      caption: "AI探索者联盟交流群",
-      groupNumber: "1047342432",
-    },
+    qrs: [
+      {
+        src: "/assets/join/freshmen-2026-qr.jpg",
+        alt: "AI探索者联盟2026级新生QQ群二维码",
+        caption: "2026级新生QQ群",
+        hint: "新生优先加入",
+      },
+      {
+        src: "/assets/join/group-qr.png",
+        alt: "AI探索者联盟社团总QQ群二维码",
+        caption: "社团总QQ群",
+        groupNumber: "1047342432",
+        hint: "全体成员交流群",
+      },
+    ],
     note: "加入社团不强制填写报名表。若你之后希望进入科研方向，可再提交科研报名。",
   },
 

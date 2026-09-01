@@ -14,9 +14,9 @@ export interface Achievement {
 }
 
 export const achievementStats = [
-  { value: "6", label: "项成果条目", desc: "覆盖国家计划、校级荣誉、竞赛与媒体报道" },
+  { value: "9", label: "项成果条目", desc: "覆盖国家计划、校级荣誉、竞赛与媒体报道" },
   { value: "3", label: "项校级示范/表彰", desc: "十佳指导教师、青年夜校示范项目、社团运营奖" },
-  { value: "1", label: "项赛区一等奖", desc: "教育信息技术应用创新大赛西北赛区" },
+  { value: "4", label: "项竞赛获奖", desc: "含启元大赛全国第1名、桌面AI超算最具开发潜力奖等" },
 ] as const;
 
 export const achievements: Achievement[] = [
@@ -86,6 +86,45 @@ export const achievements: Achievement[] = [
     evidenceLabel: "竞赛荣誉证书",
   },
   {
+    id: "gigabyte-nvidia-desktop-ai-potential-award-2026",
+    title: "技嘉 × 英伟达桌面AI超算竞赛获最具开发潜力奖",
+    date: "2026年7月26日",
+    level: "最具开发潜力奖",
+    type: "competition",
+    issuer: "技嘉 × 英伟达桌面AI超算竞赛",
+    imageCaption: "07-2026技嘉X英伟达 桌面AI超算竞赛 最具开发潜力奖",
+    summary:
+      "甘肃省人工智能与算力技术重点实验室与社团组队赴京参赛，王明明、卢凯奇、胡家瑞完成作品「岐黄AI」，在11支队伍中脱颖而出，荣获最具开发潜力奖。",
+    highlights: ["岐黄AI", "48小时线下集中开发", "实验室与社团联合组队"],
+    evidenceLabel: "竞赛颁奖现场与奖品资料",
+  },
+  {
+    id: "qiyuan-jiuchi-skill-national-first-2026",
+    title: "启元人工智能大赛九齿SKILL开发赛道全国第1名",
+    date: "2026年8月",
+    level: "全国第1名",
+    type: "competition",
+    issuer: "2026春季启元人工智能大赛",
+    imageCaption: "08-2026 启元人工智能大赛 九齿SKILL开发赛道 全国第1名",
+    summary:
+      "在2026春季启元人工智能大赛九齿SKILL开发赛道中，社团刘李宏同学获全国第1名，其余参赛同学全部进入决赛。",
+    highlights: ["九齿SKILL开发赛道", "刘李宏全国第1名", "参赛同学全部进入决赛"],
+    evidenceLabel: "启元人工智能大赛获奖名单",
+  },
+  {
+    id: "baidu-miaoda-cup-potential-award-2026",
+    title: "第二届百度“秒哒杯”人工智能通识应用大赛最具潜力奖",
+    date: "2026年",
+    level: "最具潜力奖",
+    type: "competition",
+    issuer: "第二届百度“秒哒杯”人工智能通识应用大赛",
+    imageCaption: "09-2026 第二届百度秒哒杯人工智能通识应用大赛 最具潜力奖",
+    summary:
+      "社团成员武旭颖、米杰以作品「智随访：辅助生殖妊娠结局全周期随访统计分析系统」参加第二届百度“秒哒杯”人工智能通识应用大赛，荣获最具潜力奖。",
+    highlights: ["智随访", "武旭颖、米杰", "人工智能通识应用"],
+    evidenceLabel: "秒哒杯作品展示与获奖资料",
+  },
+  {
     id: "official-media-spicy-hotpot-report-2026",
     title: "兰州大学官方媒体深度报道社团科研实践",
     date: "2026年3月3日",
@@ -101,6 +140,9 @@ export const achievements: Achievement[] = [
 ];
 
 export const achievementTimeline = [
+  { date: "2026年8月", title: "启元人工智能大赛", desc: "九齿SKILL开发赛道获全国第1名。" },
+  { date: "2026年", title: "百度秒哒杯", desc: "「智随访」获第二届人工智能通识应用大赛最具潜力奖。" },
+  { date: "2026年7月", title: "桌面AI超算竞赛", desc: "「岐黄AI」获技嘉×英伟达最具开发潜力奖。" },
   { date: "2026年6月", title: "社团文化艺术节表彰", desc: "获评“心动运营社团”奖项。" },
   { date: "2026年", title: "青年夜校示范项目", desc: "人工智能应用入门与实战课程获评示范项目。" },
   { date: "2026年", title: "全国青少年科技社团支持计划", desc: "社团成功申报国家级支持计划。" },
